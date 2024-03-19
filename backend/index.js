@@ -29,4 +29,15 @@ app.listen(port, () => {
     console.log(`Server listening on port ${port}`)
 })
 
+const startServer = () => {
+    try {
+      connectDB(process.env.DATABASE_URL)
+      
+    } catch (err) {
+      console.log(err)
+    }
+  }
+  
+  startServer();
+
 export default app
