@@ -166,7 +166,7 @@ const Home = () => {
         setModalStep(4);
       } else {
         try {
-          const response = await axios.post('http://localhost:5000/owners', {
+          const response = await axios.post('https://pet-sitter-app-sand.vercel.app/owners', {
             name,
             email,
             password,
@@ -209,7 +209,7 @@ const Home = () => {
     
     const handleDownloadPDF = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/owners'); 
+        const response = await axios.get('https://pet-sitter-app-sand.vercel.app/owners'); 
         const { service, animalType } = response.data; 
   
         const blob = new Blob([<MyDocument service={service} animalType={animalType} />], { type: "application/pdf" });

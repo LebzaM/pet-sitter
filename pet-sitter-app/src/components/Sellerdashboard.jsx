@@ -13,13 +13,13 @@ import Loader from './Loader';
         const [userData, setUserData] = useState([]);
       
         const fetchSellerData = async () => {
-          const response = await axios.get('http://localhost:5000/sellers');
+          const response = await axios.get('https://pet-sitter-app-sand.vercel.app/sellers');
           
           return response.data;
         };
       
         const fetchOwnerData = async () => {
-          const response = await axios.get('http://localhost:5000/owners');
+          const response = await axios.get('https://pet-sitter-app-sand.vercel.app/owners');
           return response.data;
         };
       

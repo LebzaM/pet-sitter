@@ -14,7 +14,7 @@ const Buyerdashboard = () => {
   const [showPaymentModal, setShowPaymentModal] = useState(false);
 
   const fetcher = async () => {
-    const response = await axios.get('http://localhost:5000/sellers');
+    const response = await axios.get('https://pet-sitter-app-sand.vercel.app/sellers');
     return response.data;
   };
   
