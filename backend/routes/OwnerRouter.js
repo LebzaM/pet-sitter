@@ -3,7 +3,7 @@ import { getOwnerById, createOwner, getAllOwners, updateOwner, deleteOwner } fro
 
 const router = express.Router();
 
-router.get('/', async (req, res) => {
+router.get('/owners', async (req, res) => {
   try {
     const owners = await getAllOwners();
     res.json(owners);
@@ -13,7 +13,7 @@ router.get('/', async (req, res) => {
 });
 
 
-router.post('/id', async (req, res) => {
+router.post('/owners', async (req, res) => {
     const { name, email, password, phoneNumber, service, animalType, selectedDate, duration } = req.body;
     const newOwnerData = { name, email, password, phoneNumber, service, animalType, selectedDate, duration };
   
@@ -26,7 +26,7 @@ router.post('/id', async (req, res) => {
     }
   });
 
-router.get('/:id', async (req, res) => {
+router.get('/owners/:id', async (req, res) => {
   const { id } = req.params;
 
   try {
@@ -40,7 +40,7 @@ router.get('/:id', async (req, res) => {
   }
 });
 
-router.patch('/:id', async (req, res) => {
+router.patch('/owners/:id', async (req, res) => {
   const { id } = req.params;
   const { name, email, password, phoneNumber, service, animalType, selectedDate, duration,  } = req.body;
   const updatedOwnerData = { name, email, password, phoneNumber, service, animalType, selectedDate, duration,  };
@@ -53,7 +53,7 @@ router.patch('/:id', async (req, res) => {
   }
 });
 
-router.delete('/:id', async (req, res) => {
+router.delete('/owners/:id', async (req, res) => {
   const { id } = req.params;
 
   try {
