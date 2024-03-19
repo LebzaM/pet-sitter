@@ -1,5 +1,5 @@
 import express from 'express';
-import { getOwnerById, createOwner, getAllOwners, updateOwner, deleteOwner } from '../controller/OwnerController.js';
+import { getOwnerById, createOwner, getAllOwners, updateOwner, deleteOwner } from '../../controller/OwnerController.js';
 
 const router = express.Router();
 

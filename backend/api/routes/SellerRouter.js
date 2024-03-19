@@ -5,7 +5,7 @@ import {
   createSeller,
   updateSeller,
   deleteSeller,
-} from '../controller/SellerController.js';
+} from '../../controller/SellerController.js';
 
 const router = express.Router();
 
