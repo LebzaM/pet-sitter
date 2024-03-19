@@ -22,7 +22,7 @@ app.use(cookieParser());
 app.get('https://pet-sitter-app-sand.vercel.app/', (req, res) => {
     res.send('Hello World!')
 })
-app.use(OwnerRouter)
+app.use('/owners', OwnerRouter)
 app.use(SellerRouter)
 app.use('/auth', authRoutes);
 app.listen(port, () => {
