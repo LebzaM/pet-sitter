@@ -1,8 +1,7 @@
 import React from 'react'
 
-import { GiJumpingDog } from 'react-icons/gi'; // Example React Icon
-import { FaLock, FaUserFriends } from 'react-icons/fa'; // More example React Icons
-
+import { GiJumpingDog } from 'react-icons/gi';
+import { FaLock, FaUserFriends } from 'react-icons/fa'; 
 const Card = ({ icon, heading, text }) => {
   return (
     <div className="max-w-md mx-auto bg-white shadow-md rounded-lg overflow-hidden flex flex-col items-center mb-4 md:mb-0 md:w-1/3">

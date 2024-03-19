@@ -82,7 +82,7 @@ const styles = StyleSheet.create({
       </Page>
     </Document>
   );
-//hey you
+
 const Home = () => {
     
     const [service, setService] = useState("");
@@ -130,7 +130,7 @@ const Home = () => {
   };
 
   const handleSearch = () => {
-    // Perform search based on selected service
+    
     if (service === "pet_sitting" || service === "pet_walking") {
       setModalIsOpen(true);
     }
@@ -140,7 +140,7 @@ const Home = () => {
     const closeModal = () => {
       setModalIsOpen(false);
       setModalStep(1);
-      // reset input fields
+      // reset 
       setName("");
       setPhone("");
       setEmail("");
@@ -177,17 +177,17 @@ const Home = () => {
             duration,
           });
     
-          // Check if signup was successful
+          
           if (response.status === 201) {
             // Store data in local storage
             localStorage.setItem('isLoggedIn', 'true');
             localStorage.setItem('userData', JSON.stringify(response));
             localStorage.setItem('userName', name);
     
-            // Navigate to the buyer dashboard
+            
             navigate('/buyerdash');
     
-            // Handle submission of data, e.g., make an API call
+            
             console.log("Name:", name);
             console.log("Phone:", phone);
             console.log("Email:", email);
@@ -195,12 +195,12 @@ const Home = () => {
             console.log("Animal Type:", animalType);
             console.log("Selected Date:", selectedDate);
             console.log("Duration:", duration);
-            // Close modal after form submission
+            
             closeModal();
           }
         } catch (error) {
           console.error('Error creating owner:', error);
-          // Handle error as needed
+          
         }
       }
     };
@@ -209,8 +209,8 @@ const Home = () => {
     
     const handleDownloadPDF = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/owners'); // Fetch data from the database
-        const { service, animalType } = response.data; // Assuming the response contains the service and animalType data
+        const response = await axios.get('http://localhost:5000/owners'); 
+        const { service, animalType } = response.data; 
   
         const blob = new Blob([<MyDocument service={service} animalType={animalType} />], { type: "application/pdf" });
         const url = URL.createObjectURL(blob);
@@ -225,7 +225,7 @@ const Home = () => {
         document.body.removeChild(link);
       } catch (error) {
         console.error('Error fetching pet sitting prices:', error);
-        // Handle error as needed
+        
       }
     };
     

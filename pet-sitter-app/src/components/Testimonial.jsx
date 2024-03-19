@@ -10,7 +10,7 @@ import Testimonial1 from '../assets/Test (2).png'
 import Testimonial2 from '../assets/Test (1).png'
 import Testimonial3 from '../assets/Test (4).png'
 import Testimonial4 from '../assets/Test1 (3).png'
-// Sample testimonial data
+
 const testimonials = [
   {
     id: 1,

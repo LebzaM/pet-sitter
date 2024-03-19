@@ -25,24 +25,22 @@ const SellerLogin = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission here
+    
     const response =await axios.post("http://localhost:5000/sellers", formData);
     
     if (response.status === 201) {
-      // Store data in local storage
+      
       localStorage.setItem('sellerLoggedIn', 'true');
       localStorage.setItem('sellerData', JSON.stringify(response));
       
 
-      // Navigate to the buyer dashboard
+      
       navigate("/sellerdash");
 
-      // Handle submission of data, e.g., make an API call
       
-      // Close modal after form submission
       
     }
-    // Reset form fields after submission if needed
+    
     
   };
   return (

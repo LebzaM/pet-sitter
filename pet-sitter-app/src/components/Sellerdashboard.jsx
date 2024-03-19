@@ -29,7 +29,7 @@ import Loader from './Loader';
             const ownerResponse = await fetchOwnerData();
             console.log(ownerResponse)
             console.log(sellerResponse)
-            setSellerData(sellerResponse[2]); // Assuming sellerData is at index 2
+            setSellerData(sellerResponse[2]); 
             setOwnerData(ownerResponse);
           };
       

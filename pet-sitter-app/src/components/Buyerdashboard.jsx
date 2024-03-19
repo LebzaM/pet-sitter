@@ -25,7 +25,7 @@ const Buyerdashboard = () => {
   if (error) return <div>Error fetching data</div>;
   if (!data) return <div><Loader /></div>;
 
-  // Filter the data based on the search term
+  
   const filteredData = data.filter((seller) =>
     seller.city.toLowerCase().includes(searchTerm.toLowerCase())
   );
@@ -43,7 +43,7 @@ const Buyerdashboard = () => {
     window.open(`mailto:${email}`);
   };
 
-  // Data for the bar chart (sellers' experience)
+  // (sellers' experience)
   const experienceData = filteredData.map((seller) => {
     const experience = seller.experience;
     if (!experience) return { name: seller.name, experience: 0 };
@@ -51,7 +51,7 @@ const Buyerdashboard = () => {
     return { name: seller.name, experience: years };
   });
 
-  // Data for the pie chart (cities)
+  // Data 
   const cityData = filteredData.reduce((acc, seller) => {
     acc[seller.city] = acc[seller.city] ? acc[seller.city] + 1 : 1;
     return acc;
