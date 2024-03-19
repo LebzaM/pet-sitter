@@ -1,9 +1,8 @@
 import express from 'express'
 import cors from 'cors'
-
-import OwnerRouter from './routes/OwnerRouter.js'
-import SellerRouter from './routes/SellerRouter.js'
-import authRoutes from './routes/authRoutes.js'
+import OwnerRouter from '../routes/OwnerRouter.js'
+import SellerRouter from '../routes/SellerRouter.js'
+import authRoutes from '../routes/authRoutes.js'
 import cookieParser from 'cookie-parser';
 import bodyParser from 'body-parser';
 const app = express()
