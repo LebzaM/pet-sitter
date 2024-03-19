@@ -15,7 +15,7 @@ app.use(cors())
 
 
 app.use(cookieParser());
-app.get('/', (req, res) => {
+app.get('https://pet-sitter-app-sand.vercel.app/', (req, res) => {
     res.send('Hello World!')
 })
 app.use(OwnerRouter)

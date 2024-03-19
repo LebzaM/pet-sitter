@@ -106,9 +106,9 @@ const NavBar = () => {
           </div>
           <nav className="mt-10">
             <ul className="text-lg">
-              <li className="py-3 px-6 border-b"> 
+              {/* <li className="py-3 px-6 border-b"> 
                 <Link to="/">Login</Link>
-              </li>
+              </li> */}
               <li className="py-3 px-6 border-b">
                 <Link to="/">Login as Pet Sitter</Link>
               </li>
@@ -148,9 +148,9 @@ const NavBar = () => {
         </>
       ) : (
         <>
-          <button className="bg-blue-500 px-4 py-2 rounded-full font-gaya text-white ">
+          {/* <button className="bg-blue-500 px-4 py-2 rounded-full font-gaya text-white ">
             <Link to="/login">Login</Link>
-          </button>
+          </button> */}
           {isSellerLoggedIn ? (
             <button className="bg-blue-500 px-4 py-2 rounded-full font-gaya text-white ">
               <Link to="/sellerdashboard">Seller Dashboard</Link>
