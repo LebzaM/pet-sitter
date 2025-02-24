@@ -67,7 +67,19 @@ const router = createBrowserRouter([
   },
 ]);
 const App = () => {
-  return <RouterProvider router={router} />;
+  // <RouterProvider router={router} />;
+  return (
+    <div className="flex items-center justify-center min-h-screen bg-gray-100 p-4">
+      <div className="bg-white rounded-2xl shadow-lg p-8 max-w-md w-full text-center">
+        <h1 className="text-3xl font-bold text-gray-800 mb-4">Acme Inc</h1>
+        <p className="text-lg text-gray-600 mb-4">Thank you for submitting the form!</p>
+        <p className="text-sm text-gray-500 mb-6">
+          We appreciate your inquiry. Our team is currently reviewing your issue/question, and we will get back to you as soon as possible.
+        </p>
+        <div className="text-sm text-gray-400">Sit tight — we’re on it!</div>
+      </div>
+    </div>
+  );
 };
 
 export default App;
